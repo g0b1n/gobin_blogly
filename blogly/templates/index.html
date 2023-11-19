@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="static/edit.css"> -->
+    <title>Blogly</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+    {% block content %}
+    <h1 class="title_txt">Users</h1>
+    {% for user in users %}
+    <ul>
+        <li class="user_link">
+            <a class="user_link_anchor" href="/users/{{user.id}}">{{user.full_name}}</a>
+        </li>
+    </ul>
+    {% endfor %}
+
+    <button class="add_btn"><a class="add_user_btn" href="/users/new">Add Users</a></button>
+     <!-- <p><a class="btn btn-sm btn-secondary" href="/users/new">Add Users</a></p> -->
+
+    {% endblock %}
+
+</body>
+</html>

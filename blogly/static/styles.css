@@ -1,0 +1,65 @@
+
+.show_username h1{
+    color: #3238a8;
+}
+
+.user_link a {
+    color: #3238a8;
+    text-decoration: none;
+}
+
+.add_btn {
+    background-color: #32a852;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+}
+
+.add_btn:hover {
+    background-color: #277d3e;
+}
+
+.add_user_btn {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.user_img img{
+    width: auto;
+    height: 200px;
+}
+
+.btn_edit {
+    background-color: #32a852;
+    font-size: 16px;
+    color: #ffffff;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+}
+
+.btn_edit:hover {
+    background-color: #277d3e;
+}
+
+.btn_delete {
+    background-color: #a84632;
+    font-size: 16px;
+    color: #ffffff;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+}
+
+.btn_delete:hover{
+    background-color: #8c3827;
+}
+
+.title_txt {
+    font-family: Helvetica, sans-serif;
+    color: #3238a8;
+}
