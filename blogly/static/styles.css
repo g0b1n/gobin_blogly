@@ -1,4 +1,4 @@
-
+/* 
 .show_username h1{
     color: #3238a8;
 }
@@ -57,9 +57,4 @@
 
 .btn_delete:hover{
     background-color: #8c3827;
-}
-
-.title_txt {
-    font-family: Helvetica, sans-serif;
-    color: #3238a8;
 }

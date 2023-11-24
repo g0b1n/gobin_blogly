@@ -33,11 +33,6 @@ class User(db.Model):
 
     posts = db.relationship('Post', backref='user', cascade="all, delete-orphan")
     
-#added
-
-
-
-
     @property
     def full_name(self):
         """Return fullname of users"""
@@ -45,6 +40,8 @@ class User(db.Model):
 
 
 class Post(db.Model):
+    """Blog Post"""
+
     __tablename__ = 'posts'
 
     id = db.Column(db.Integer,
@@ -72,5 +69,26 @@ class Post(db.Model):
         return self.created_at.strftime("%a %b %-d %Y, %-I:%M %p")
 
 
+class Tag(db.Model):
+    """Tag that can be added to posts."""
 
-    
+    __tablename__ = 'tags'
+
+    id = db.Column(db.Integer,
+                   primary_key = True)
+  
+    name = db.Column(db.Text,
+                   nullable = False,
+                   unique = False)
+
+
+    posts = db.relationship('Post', secondary = "posts_tag", backref = 'tags')
+
+
+class PostTag(db.Model):
+    """Tag on a post."""
+    __tablename__ = 'posts_tag'
+
+
+    post_id = db.Column(db.Integer, db.ForeignKey("posts.id"), primary_key = True)
+    tags_id = db.Column(db.Integer, db.ForeignKey("tags.id"), primary_key = True)

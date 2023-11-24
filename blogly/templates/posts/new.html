@@ -9,11 +9,11 @@
 </head>
 <body>
 
-    <h1>Add post for {{ user.full_name }}</h1>
+    <h1>Add Post for {{ user.full_name }}</h1>
 
     <form methods="POST">
 
-        <div class="fprm-group row">
+        <div class="form-group row">
             <label for="title" class="col-sm-2 col-form-label">Title</label>
             <div class="col-sm-10">
                 <input class="form-control" id="title" name="title">
@@ -27,6 +27,7 @@
             </div>
         </div>
 
+        <!-- added in part 3 -->
         <div class="form-check">
             {% for tag in tags %}
             <div>
